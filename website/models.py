@@ -21,7 +21,7 @@ class User (db.Model, UserMixin):
                                         # No user can have the same email as another user. 
     email = db.Column(db.String(150), unique=True)
     password = db.Column(db.String(150))
-    firstName = db.Column(db.String(150))
+    first_name = db.Column(db.String(150))
     # Sets the relationship to the notes table by referencing the table name.
     # Foreign key lowercase, Referencing the table is Uppercase
     notes = db.relationship('Note')
